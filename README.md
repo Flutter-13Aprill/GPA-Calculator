@@ -2,13 +2,15 @@
 
 You will build a **GPA Calculator App** to help students calculate their academic performance based on course grades and credit hours. The app will allow users to input their courses, assign grades and hours, and compute the GPA dynamically.
 
-> **Note:** You are required to **design the UI layout by yourself** using appropriate Flutter widgets.
+> **Note:** 
+> - You are required to **design the UI layout by yourself** using appropriate Flutter widgets.  
+> - You must use **BLoC** for state management in this project.
 
 ---
 
 ## 🚀 App Features
 
-### A. 📄 Homepage (BLoC Example):
+### A. 📄 Homepage :
 
 - Display a list of all added courses with their grades and credit hours.
 - Add a form to input course name, grade, and credit hours.
