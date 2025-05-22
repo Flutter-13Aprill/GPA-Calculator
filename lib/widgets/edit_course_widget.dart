@@ -23,7 +23,7 @@ class EditCourseWidget extends StatelessWidget {
   EditCourseWidget({super.key, required this.gapBloc, required this.course, required this.index});
   int index;
   final CourseModel course; 
-  String selectedGrade = '';
+  late String selectedGrade;
   final List<String> grades = ['A+', 'A', 'B+', 'B', 'C+', 'C', 'D+', 'D', 'F'];
   final GlobalKey<FormState> _formKey = GlobalKey();
 
@@ -36,7 +36,8 @@ class EditCourseWidget extends StatelessWidget {
 
     final TextEditingController courseNameController = TextEditingController(text: course.courseName);
     final TextEditingController courseHoursCreditsController = TextEditingController(text: course.creditHours);
-
+    selectedGrade = course.grade;
+    
     return BlocProvider.value(
       value: gapBloc,
       child: GestureDetector(
@@ -72,7 +73,7 @@ class EditCourseWidget extends StatelessWidget {
 
                     gapBloc.add(EditCourseEvent(index: index, course: course));
 
-                    Future.delayed(Duration(milliseconds: 500), () {
+                    Future.delayed(Duration(milliseconds: 350), () {
                       if (context.mounted) {
                         Navigator.pop(context);
                       }

@@ -73,7 +73,7 @@ class AddCourseWidget extends StatelessWidget {
 
                     gapBloc.add(AddNewCourseEvent(course: course));
 
-                    Future.delayed(Duration(milliseconds: 300), () {
+                    Future.delayed(Duration(milliseconds: 350), () {
                       if (context.mounted) {
                         Navigator.pop(context);
                       }

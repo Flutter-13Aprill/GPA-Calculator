@@ -29,6 +29,7 @@ class FormCourseWidget extends StatelessWidget {
           CustomTextFormField(
             controller: courseNameController,
             labelText: 'Course name',
+            isHours: false,
             onValidate: (value) {
               if (value!.trim().isEmpty) {
                 return 'Please make sure to enter course name';
@@ -36,9 +37,9 @@ class FormCourseWidget extends StatelessWidget {
               return null;
             },
           ),
-
+    
           Divider(),
-
+    
           Row(
             spacing: 24,
             children: [
@@ -60,11 +61,12 @@ class FormCourseWidget extends StatelessWidget {
                   },
                 ),
               ),
-
+    
               Expanded(
                 child: CustomTextFormField(
                   controller: courseHoursCreditsController,
                   labelText: 'Credit Hours',
+                  isHours: true,
                   onValidate: (value) {
                     if (value!.trim().isEmpty) {
                       return 'Please make sure \nto enter course\'s\ncredit hours ';

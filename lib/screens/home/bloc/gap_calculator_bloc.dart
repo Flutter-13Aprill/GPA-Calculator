@@ -56,33 +56,33 @@ class GapCalculatorBloc extends Bloc<GapCalculatorEvent, GapCalculatorState> {
 }
 
 
-double getGradePoint(CourseModel course) {
-  switch (course.grade) {
-    case 'A+':
-      return 4;
+// double getGradePoint(CourseModel course) {
+//   switch (course.grade) {
+//     case 'A+':
+//       return 4;
 
-    case 'A':
-      return 3.75;
+//     case 'A':
+//       return 3.75;
 
-    case 'B+':
-      return 3.5;
+//     case 'B+':
+//       return 3.5;
 
-    case 'B':
-      return 3;
+//     case 'B':
+//       return 3;
 
-    case 'C+':
-      return 2.5;
+//     case 'C+':
+//       return 2.5;
 
-    case 'C':
-      return 2;
+//     case 'C':
+//       return 2;
 
-    case 'D+':
-      return 1.5;
+//     case 'D+':
+//       return 1.5;
 
-    case 'D':
-      return 1;
+//     case 'D':
+//       return 1;
 
-    default:
-      return 0;
-  }
-}
+//     default:
+//       return 0;
+//   }
+// }

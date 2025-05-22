@@ -12,17 +12,26 @@ void courseBottomSheetWidget({required BuildContext context,required Widget chil
   BlocProvider.value(
     value: gapBloc,
     child: await showModalBottomSheet(
+      isScrollControlled: true,
       context: context,
       builder: (context) {
-        return Container(
-          height: context.getHeight(multiplied: 0.4),
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(12),
-              topRight: Radius.circular(12),
+        return GestureDetector(
+          onTap: () => FocusScope.of(context).unfocus(),
+          child: Padding(
+            padding: EdgeInsets.only(
+              bottom: MediaQuery.of(context).viewInsets.bottom
+            ),
+            child: Container(
+              height: context.getHeight(multiplied: 0.4),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(12),
+                  topRight: Radius.circular(12),
+                ),
+              ),
+              child: child,
             ),
           ),
-          child: child,
         );
       },
     ),

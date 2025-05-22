@@ -15,7 +15,7 @@ final class ShoeCoursesState extends GapCalculatorState{
     }
     
     // Calculating total grade points from all courses
-    final totalPoints = courses.map((course) => getGradePoint(course) * double.parse(course.creditHours)).reduce((value, coursePoint) => value + coursePoint);
+    final totalPoints = courses.map((course) => CourseModel.getGradePoint(course) * double.parse(course.creditHours)).reduce((value, coursePoint) => value + coursePoint);
 
     // Getting all the hours from courses
     final totalHours = courses.map((course) => int.parse(course.creditHours)).reduce((value, courseHours) => value + courseHours);

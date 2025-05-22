@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 // -- Widgets
 import 'package:gpa_calculator/widgets/add_course_widget.dart';
 import 'package:gpa_calculator/widgets/course_bottom_sheet_widget.dart';
-import 'package:gpa_calculator/widgets/course_widget.dart';
-import 'package:gpa_calculator/widgets/edit_course_widget.dart';
+import 'package:gpa_calculator/widgets/course_dismissible_widget.dart';
 
 // -- BLoC
 import 'package:gpa_calculator/screens/home/bloc/gap_calculator_bloc.dart';
@@ -28,106 +27,80 @@ class HomeScreen extends StatelessWidget {
 
       child: Builder(
         builder: (context) {
-
           final gapBloc = context.read<GapCalculatorBloc>();
 
           return Scaffold(
-              appBar: AppBar(
-                title: Text('GPA Calculator',style: Theme.of(context).textTheme.titleLarge),
-                flexibleSpace: Container(
-                  decoration: BoxDecoration(gradient: AppColors.appBarColor),
-                ),
+            appBar: AppBar(
+              title: Text('GPA Calculator',style: Theme.of(context).textTheme.titleLarge,),
+              flexibleSpace: Container(
+                decoration: BoxDecoration(gradient: AppColors.appBarColor),
               ),
-              floatingActionButton: FloatingActionButton(
-
-                child: Container(
-                  width: 60,
-                  height: 60,
-                  decoration: BoxDecoration(
-                    gradient: AppColors.appBarColor,
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: Icon(Icons.add,size: 30,color: AppColors.secondaryColor,
-                  ),
+            ),
+            floatingActionButton: FloatingActionButton(
+              child: Container(
+                width: 60,
+                height: 60,
+                decoration: BoxDecoration(
+                  gradient: AppColors.appBarColor,
+                  borderRadius: BorderRadius.circular(12),
                 ),
-
-                onPressed: () {
-                  courseBottomSheetWidget(context: context, child: AddCourseWidget(gapBloc: gapBloc), gapBloc: gapBloc);
-                },
-
+                child: Icon(Icons.add,size: 30,color: AppColors.secondaryColor,),
               ),
-              body: Container(
-                width: context.getWidth(),
-                height: context.getHeight(),
-                margin: EdgeInsets.symmetric(horizontal: 8),
 
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    
-                    BlocBuilder(
-                      bloc: gapBloc,
-                      builder: (context, state) {
-                        if (state is ShoeCoursesState) {
+              onPressed: () {
+                courseBottomSheetWidget(context: context, child: AddCourseWidget(gapBloc: gapBloc),gapBloc: gapBloc,);
+              },
+            ),
+            body: Container(
+              width: context.getWidth(),
+              height: context.getHeight(),
+              margin: EdgeInsets.symmetric(horizontal: 8),
 
-                          final courses = state.courses;
-                          final gpa = state.gpa;
+              child: BlocBuilder<GapCalculatorBloc, GapCalculatorState>(
+                builder: (context, state) {
 
-                          return Column(
-                            spacing: 24,
-                            children: [
+                  if (state is ShoeCoursesState) {
+                    final courses = state.courses;
+                    final gpa = state.gpa;
 
-                              Text('GPA: ${gpa.toStringAsFixed(2)}'),
+                    // To solve the overflow when it comes from BottomSheet, you need to wrap the entire screen with SingleChildScrollView
+                    return SingleChildScrollView(
+                      child: Column(
+                        children: [
+                          BlocBuilder(
+                            bloc: gapBloc,
+                            builder: (context, state) {
+                              return Column(
+                                spacing: 24,
+                                children: [
 
-                              SizedBox(
-                                height: context.getHeight(multiplied: 0.8),
-                                child: ListView.builder(
-                                  itemCount: courses.length,
-                                  itemBuilder: (context, index) {
-                                    return Dismissible(
-                                      key: ValueKey(courses[index].id),
-                                      direction: DismissDirection.endToStart,
-                                      background: Container(
-                                        padding: EdgeInsets.symmetric(horizontal: 16),
-                                        color: Colors.red,
-                                        child: Row(
-                                          children: [
-                                            Spacer(),
-                                            Icon(Icons.delete,color: Colors.white,size: 28,),
-                                          ],
-                                        ),
-                                      ),
-                                      onDismissed: (direction) {
-                                        
-                                        gapBloc.add(DeleteCourseEvent(index: index));
-                                        
+                                  Text('GPA: ${gpa.toStringAsFixed(2)}'),
+                      
+                                  SizedBox(
+                                    height: context.getHeight(multiplied: 0.8),
+                                    child: ListView.builder(
+                                      itemCount: courses.length,
+                                      itemBuilder: (context, index) {
+                                        return CourseDismissibleWidget(courses: courses, index: index, gapBloc: gapBloc);
                                       },
-                                      child: InkWell(
-                                        onTap: () {
-                                          courseBottomSheetWidget(context: context, child: EditCourseWidget(gapBloc: gapBloc, course: courses[index], index: index), gapBloc: gapBloc);
-                                        },
-                                        child: Container(
-                                          margin: EdgeInsets.all(8),
-                                          child: CourseWidget(course: courses[index]),
-                                        ),
-                                      ),
-                                    );
-                                  },
-                                ),
-                              ),
-                            ],
-                          );
-                        }
+                                    ),
+                                  ),
+                                ],
+                              );
+                              
+                            },
+                          ),
+                        ],
+                      ),
+                    );
+                  }
 
-                        // -- If the state is GapCalculatorInitial it will show this
-                        return Center(child: Text('No Courses Added'));
-                      },
-                    ),
-
-                  ],
-                ),
+                  // If the state is not ShoeCoursesState show this widget
+                  return Center(child: Text('No Courses Added'));
+                },
               ),
-            );
+            ),
+          );
         },
       ),
     );
