@@ -1,6 +1,9 @@
+import 'dart:math';
+
 class CourseModel {
   CourseModel({required this.courseName, required this.creditHours, required this.grade});
 
+  int id = Random().nextInt(99999);
   String courseName;
   String creditHours;
   String grade; 

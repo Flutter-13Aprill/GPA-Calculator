@@ -78,13 +78,14 @@ class HomeScreen extends StatelessWidget {
                             children: [
 
                               Text('GPA: ${gpa.toStringAsFixed(2)}'),
+
                               SizedBox(
                                 height: context.getHeight(multiplied: 0.8),
                                 child: ListView.builder(
                                   itemCount: courses.length,
                                   itemBuilder: (context, index) {
                                     return Dismissible(
-                                      key: ValueKey(courses[index].courseName),
+                                      key: ValueKey(courses[index].id),
                                       direction: DismissDirection.endToStart,
                                       background: Container(
                                         padding: EdgeInsets.symmetric(horizontal: 16),
