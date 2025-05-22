@@ -1,49 +1,34 @@
-# 📘 GPA Calculator App
-
-You will build a **GPA Calculator App** to help students calculate their academic performance based on course grades and credit hours. The app will allow users to input their courses, assign grades and hours, and compute the GPA dynamically.
-
-> **Note:** 
-> - You are required to **design the UI layout by yourself** using appropriate Flutter widgets.  
-> - You must use **BLoC** for state management in this project.
+# GPA Calculator📈
+- A Beautiful app for calculating GPA
+---
+## Screenshot
+![App Screenshot](gpa_calculator/assets/screenshots/1.png)
+![App Screenshot](gpa_calculator/assets/screenshots/2.png)
+![App Screenshot](gpa_calculator/assets/screenshots/3.png)
+![App Screenshot](gpa_calculator/assets/screenshots/4.png)
+![App Screenshot](gpa_calculator/assets/screenshots/5.png)
+![App Screenshot](gpa_calculator/assets/screenshots/6.png)
 
 ---
-
-## 🚀 App Features
-
-### A. 📄 Homepage :
-
-- Display a list of all added courses with their grades and credit hours.
-- Add a form to input course name, grade, and credit hours.
-- Use a dropdown or custom widget to select the grade from a list (e.g., A, B+, C...).
-- Display the calculated GPA at the top or bottom of the screen.
-- Use **BLoC** to manage state updates when courses are added or removed.
-
-### B. ➕ Add/Edit Course Screen:
-
-- Allow users to input:
-  - Course name  
-  - Grade  
-  - Credit hours  
-- Provide form validation (e.g., course name can't be empty, credit must be a number).
-- Support editing or deleting courses.
-
+## Tech Stack
+- Flutter
+- Dart
 ---
+## Installation
+1. Clone the repository:
+```bash
+git clone https://github.com/Ahmed-Almansour99/GPA-Calculator.git
 
-## 💻 GitHub Submission Guidelines:
+cd GPA-Calculator
 
-- Ensure your pull request includes a **well-structured README** file.
-- The README should include:
-  - A screenshot of your app.  
-  - Project description and instructions.
+cd gpa_calculator
 
----
+flutter pub get
 
-## ⏰ Deadline
+flutter run
+```
+## Author
 
-Your project must be submitted by **May 22**, **AT 10:00 AM**.
+github : Ahmed-Almansour99
+ 
 
----
-
-## 📝 Reminder
-
-> Even the greatest apps started as a blank screen 🖥️🎉
