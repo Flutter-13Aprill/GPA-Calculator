@@ -18,7 +18,7 @@ Course State: Manages the list of courses and calculates the GPA.
 Course Events: Defines actions related to course management (add, update, delete).
 Course BLoC: Handles the business logic for processing course events and updating the state.
 
-## UI Screens:
+## UI Screens
 Home Screen: Displays the current GPA and lists all courses.
 Add/Edit Course Screen: Form to add a new course or edit an existing one.
 
@@ -48,7 +48,7 @@ Note: You need a working emulator or a connected real device
 ![alt text](ScreenShout/image.png)
 
 # Add Edit Course Screen 
-# Add Course Screen 
+## Add Course Screen 
 ![alt text](ScreenShout/image-1.png)
-# Edit Course Screen
+## Edit Course Screen
 ![alt text](ScreenShout/image-2.png)
