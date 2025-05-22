@@ -45,7 +45,7 @@ Note: You need a working emulator or a connected real device
 # 📱Screen Design Overview
 
 # Home Screen
-![alt text](ScreenShout/image.png)
+![alt text](ScreenShout/image-1.png)
 
 # Add Edit Course Screen 
 ## Add Course Screen 
