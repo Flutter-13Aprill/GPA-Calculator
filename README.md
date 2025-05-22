@@ -44,11 +44,11 @@ Note: You need a working emulator or a connected real device
 
 # 📱Screen Design Overview
 
-## Home Screen
+# Home Screen
 ![alt text](ScreenShout/image.png)
 
-### Add Edit Course Screen 
-### Add Course Screen 
+# Add Edit Course Screen 
+# Add Course Screen 
 ![alt text](ScreenShout/image-1.png)
-###  Edit Course Screen
+# Edit Course Screen
 ![alt text](ScreenShout/image-2.png)
