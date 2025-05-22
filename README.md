@@ -1,49 +1,58 @@
-# 📘 GPA Calculator App
+![Tuwaiq Academy Logo](assets/README/tuwaiq_academy_logo.png)
 
-You will build a **GPA Calculator App** to help students calculate their academic performance based on course grades and credit hours. The app will allow users to input their courses, assign grades and hours, and compute the GPA dynamically.
+# GPA-Calculator
+GPA Calculator is the perfect app to quickly calculate your GPA on a 4.0 scale. Simply enter your course grades and credit hours, and get an accurate GPA instantly. With a clean, easy-to-use interface and efficient BLoC architecture, the app offers a smooth and responsive experience.
 
-> **Note:** 
-> - You are required to **design the UI layout by yourself** using appropriate Flutter widgets.  
-> - You must use **BLoC** for state management in this project.
 
----
 
-## 🚀 App Features
 
-### A. 📄 Homepage :
+# Getting Started
+### Prerequisites
 
-- Display a list of all added courses with their grades and credit hours.
-- Add a form to input course name, grade, and credit hours.
-- Use a dropdown or custom widget to select the grade from a list (e.g., A, B+, C...).
-- Display the calculated GPA at the top or bottom of the screen.
-- Use **BLoC** to manage state updates when courses are added or removed.
+Flutter SDK 
 
-### B. ➕ Add/Edit Course Screen:
+A code editor (such as VS Code or Android Studio)
 
-- Allow users to input:
-  - Course name  
-  - Grade  
-  - Credit hours  
-- Provide form validation (e.g., course name can't be empty, credit must be a number).
-- Support editing or deleting courses.
+### Installation
+1. Clone the repository:
 
----
+   ```
+   git clone https://github.com/2Mhd6/GPA-Calculator.git
+   ```
 
-## 💻 GitHub Submission Guidelines:
+2. Navigate to the project directory:
 
-- Ensure your pull request includes a **well-structured README** file.
-- The README should include:
-  - A screenshot of your app.  
-  - Project description and instructions.
+   ```
+   cd GPA-Calculator
+   ```
+   
+3. Install dependencies:
 
----
+   ```
+   flutter pub get
+   ```
 
-## ⏰ Deadline
+4. Run the app:
 
-Your project must be submitted by **May 22**, **AT 10:00 AM**.
+   ```
+   flutter run
+   ```
 
----
 
-## 📝 Reminder
+## Output
+[**Check out the output**](https://drive.google.com/file/d/1F2OJXKrgmJTYYO73EegFznUYu2NjXQpB/view?usp=sharing)
 
-> Even the greatest apps started as a blank screen 🖥️🎉
+
+
+## Languages, Frameworks & Packages
+
+**Dart**
+
+**Flutter**
+
+[**flutter_bloc**](https://pub.dev/packages/flutter_bloc)
+
+## Created By
+
+[**Mohammed S. Alshammari**](https://www.linkedin.com/in/mohammedsalshammari/)
+
