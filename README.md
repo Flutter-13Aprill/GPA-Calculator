@@ -1,49 +1,59 @@
 # 📘 GPA Calculator App
 
-You will build a **GPA Calculator App** to help students calculate their academic performance based on course grades and credit hours. The app will allow users to input their courses, assign grades and hours, and compute the GPA dynamically.
+# Project Description
 
-> **Note:** 
-> - You are required to **design the UI layout by yourself** using appropriate Flutter widgets.  
-> - You must use **BLoC** for state management in this project.
+The GPA Calculator App designed to help students manage their courses and calculate their Grade Point Average (GPA) efficiently. The app provides a user-friendly interface for adding, editing, and deleting courses, while dynamically calculating the GPA based on the entered data.
 
----
+## Features
 
-## 🚀 App Features
+Course Management: Users can add new courses, edit existing ones, and delete courses they no longer need.
+GPA Calculation: Automatically calculates the GPA based on the courses and their respective grades and credit hours.
+User Interface: Intuitive and responsive design utilizing Flutter's Material Design components, ensuring a smooth user experience.
+State Management: Implements the BLoC (Business Logic Component) pattern for managing the application state effectively.
 
-### A. 📄 Homepage :
+## Components
 
-- Display a list of all added courses with their grades and credit hours.
-- Add a form to input course name, grade, and credit hours.
-- Use a dropdown or custom widget to select the grade from a list (e.g., A, B+, C...).
-- Display the calculated GPA at the top or bottom of the screen.
-- Use **BLoC** to manage state updates when courses are added or removed.
+Course Model: Represents a course with attributes like name, grade, and credit hours.
+Course State: Manages the list of courses and calculates the GPA.
+Course Events: Defines actions related to course management (add, update, delete).
+Course BLoC: Handles the business logic for processing course events and updating the state.
 
-### B. ➕ Add/Edit Course Screen:
+## UI Screens:
+Home Screen: Displays the current GPA and lists all courses.
+Add/Edit Course Screen: Form to add a new course or edit an existing one.
 
-- Allow users to input:
-  - Course name  
-  - Grade  
-  - Credit hours  
-- Provide form validation (e.g., course name can't be empty, credit must be a number).
-- Support editing or deleting courses.
+## Technologies Used
+Flutter: For building the mobile application.
+Dart: Programming language used for application development.
+BLoC: For state management.
 
----
+## Target Audience
+The app is targeted at students who wish to keep track of their academic performance and GPA in an organized manner.
 
-## 💻 GitHub Submission Guidelines:
 
-- Ensure your pull request includes a **well-structured README** file.
-- The README should include:
-  - A screenshot of your app.  
-  - Project description and instructions.
+## ⚙️ Setup Instructions
 
----
+Clone the repository: Use the command line: git clone <Your Repository Path>
 
-## ⏰ Deadline
+Install dependencies: Make sure you have Flutter installed. Then run: flutter pub get
 
-Your project must be submitted by **May 22**, **AT 10:00 AM**.
+Run the app: You can launch the app using: flutter run
 
----
+Note: You need a working emulator or a connected real device
 
-## 📝 Reminder
 
-> Even the greatest apps started as a blank screen 🖥️🎉
+# 📱Screen Design Overview
+
+## Home Screen
+
+![alt text](ScreenShout/image.png)
+
+### Add Edit Course Screen 
+
+### Add Course Screen 
+![alt text](ScreenShout/image-1.png)
+
+
+###  Edit Course Screen
+
+![alt text](ScreenShout/image-2.png)
