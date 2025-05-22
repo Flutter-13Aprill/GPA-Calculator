@@ -7,4 +7,6 @@ class CourseModel {
 
   // Later on I will use this property to calculate the GPA
   double points = 0;
+
+  
 }

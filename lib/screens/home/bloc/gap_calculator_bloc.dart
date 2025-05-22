@@ -56,8 +56,6 @@ class GapCalculatorBloc extends Bloc<GapCalculatorEvent, GapCalculatorState> {
 }
 
 
-
-
 double getGradePoint(CourseModel course) {
   switch (course.grade) {
     case 'A+':
