@@ -1,49 +1,102 @@
-# 📘 GPA Calculator App
+## Simple Flutter GPA Calculator
 
-You will build a **GPA Calculator App** to help students calculate their academic performance based on course grades and credit hours. The app will allow users to input their courses, assign grades and hours, and compute the GPA dynamically.
+A lightweight Flutter application that allows you to manage your academic courses and calculate your GPA in real time. You can add, edit, or delete courses seamlessly using BLoC for state management. The UI features a dashed border around the GPA and total credits summary using the `mobkit_dashed_border` package.
 
-> **Note:** 
-> - You are required to **design the UI layout by yourself** using appropriate Flutter widgets.  
-> - You must use **BLoC** for state management in this project.
+## Screenshots
+
+### Home Screen
+
+![Home Screen](Screenshots/home.png)
+
+### Add Course Dialog
+
+![Add Course](Screenshots/add.png)
+
+### Edit Course Dialog
+
+![Edit Course](Screenshots/edit.png)
+
+### Delete Course (Dismissible)
+
+![Delete Course](Screenshots/delete.png)
+
+## Features
+
+* **Add Courses**
+  Tap the **+** button in the app bar to open a dialog for adding a new course (course name, credit hours, grade).
+
+* **Edit Courses**
+  Tap a course list tile to open a dialog pre-filled with its details for editing.
+
+* **Delete Courses**
+  Swipe a course entry to the left or right to delete it using Flutter's `Dismissible` widget.
+
+* **Real-time GPA Calculation**
+  Displays your calculated GPA and total credits with a sleek dashed border provided by the `mobkit_dashed_border` package.
+
+* **BLoC State Management**
+  Built with the BLoC pattern for clear separation of UI and business logic, ensuring maintainability and testability.
+
+* **Course Model**
+  Uses a `Course` data model class to encapsulate course properties and facilitate state updates.
+
+## Tech Stack
+
+* **Flutter** (>=3.0.0)
+* **Dart**
+* **flutter\_bloc** for state management
+* **mobkit\_dashed\_border** for dashed UI borders
+
+## Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/your-username/flutter-gpa-calculator.git
+   ```
+2. **Change into project directory**
+
+   ```bash
+   cd flutter-gpa-calculator
+   ```
+3. **Install dependencies**
+
+   ```bash
+   flutter pub get
+   ```
+4. **Run the app**
+
+   ```bash
+   flutter run
+   ```
+
+## How to Use
+
+1. **View Courses**
+   The home screen lists all your added courses, showing course name, credits, and grade.
+
+2. **Add a Course**
+
+   * Tap the **+** icon in the top-right corner.
+   * Fill in the course details in the dialog.
+   * Tap **Save** to add the course to the list and recalculate GPA.
+
+3. **Edit a Course**
+
+   * Tap on an existing course list tile.
+   * Modify any details in the dialog.
+   * Tap **Update** to apply changes and refresh GPA.
+
+4. **Delete a Course**
+
+   * Swipe a course entry left or right.
+   * The course is removed instantly and the GPA is updated.
+
+## Author
+
+**Solaiman Al-Dokhail**
+Software Engineering Student
 
 ---
 
-## 🚀 App Features
-
-### A. 📄 Homepage :
-
-- Display a list of all added courses with their grades and credit hours.
-- Add a form to input course name, grade, and credit hours.
-- Use a dropdown or custom widget to select the grade from a list (e.g., A, B+, C...).
-- Display the calculated GPA at the top or bottom of the screen.
-- Use **BLoC** to manage state updates when courses are added or removed.
-
-### B. ➕ Add/Edit Course Screen:
-
-- Allow users to input:
-  - Course name  
-  - Grade  
-  - Credit hours  
-- Provide form validation (e.g., course name can't be empty, credit must be a number).
-- Support editing or deleting courses.
-
----
-
-## 💻 GitHub Submission Guidelines:
-
-- Ensure your pull request includes a **well-structured README** file.
-- The README should include:
-  - A screenshot of your app.  
-  - Project description and instructions.
-
----
-
-## ⏰ Deadline
-
-Your project must be submitted by **May 22**, **AT 10:00 AM**.
-
----
-
-## 📝 Reminder
-
-> Even the greatest apps started as a blank screen 🖥️🎉
+Happy calculating! 🎓
