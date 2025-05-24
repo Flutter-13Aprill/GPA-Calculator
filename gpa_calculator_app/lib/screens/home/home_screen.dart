@@ -92,8 +92,11 @@ class HomeScreen extends StatelessWidget {
                                           item.subjectName;
                                       bloc.hoursController.text =
                                           item.subjectHours.toString();
-                                      bloc.selected = item.subjectGrade;
-
+                                      bloc.add(
+                                        GradeSelected(
+                                          selected: item.subjectGrade,
+                                        ),
+                                      );
                                       showDialog(
                                         context: context,
                                         builder:

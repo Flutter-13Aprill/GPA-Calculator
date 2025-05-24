@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gpa_calculator_app/screens/home/bloc/gpa_bloc.dart';
 import 'package:gpa_calculator_app/utils/extensions/screen/screen_size.dart';
 
 class SubjectWidget extends StatelessWidget {
@@ -43,7 +44,9 @@ class SubjectWidget extends StatelessWidget {
         ),
         child: ListTile(
           title: Text(title, style: TextStyle(fontWeight: FontWeight.bold)),
-          subtitle: Text('Hours: ${hours.toString()} · Grade: $grade'),
+          subtitle: Text(
+            'Hours: ${hours.toString()} · Grade: ${GpaBloc().gradeLetters[grade] ?? grade}',
+          ),
           trailing: Row(
             mainAxisSize: MainAxisSize.min,
 

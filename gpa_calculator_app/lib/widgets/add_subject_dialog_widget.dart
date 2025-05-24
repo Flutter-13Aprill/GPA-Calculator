@@ -96,7 +96,10 @@ class AddSubjectDialogWidget extends StatelessWidget {
                               builder: (context, state) {
                                 return DropdownButton2<double>(
                                   isExpanded: true,
-                                  hint: const Text('Select Grade'),
+                                  hint: Text(
+                                    'Select Grade',
+                                    style: TextStyle(fontSize: 14),
+                                  ),
                                   items:
                                       bloc.gradesMap.entries
                                           .map(

@@ -97,7 +97,10 @@ class EditSubjectDialogWidget extends StatelessWidget {
                               builder: (context, state) {
                                 return DropdownButton2<double>(
                                   isExpanded: true,
-                                  hint: const Text('Select Grade'),
+                                  hint: Text(
+                                    'Select Grade',
+                                    style: TextStyle(fontSize: 14),
+                                  ),
                                   items:
                                       bloc.gradesMap.entries
                                           .map(
@@ -107,10 +110,8 @@ class EditSubjectDialogWidget extends StatelessWidget {
                                             ),
                                           )
                                           .toList(),
-                                  value:
-                                      (state is SuccessState)
-                                          ? state.selected
-                                          : null,
+                                  value: bloc.selected,
+
                                   onChanged: (double? value) {
                                     if (value != null) {
                                       bloc.add(GradeSelected(selected: value));

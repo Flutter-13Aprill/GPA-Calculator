@@ -26,6 +26,18 @@ class GpaBloc extends Bloc<GpaEvent, GpaState> {
     'F': 1,
   };
 
+  final Map<double, String> gradeLetters = {
+    5.0: 'A+',
+    4.75: 'A',
+    4.5: 'B+',
+    4.0: 'B',
+    3.5: 'C+',
+    3.0: 'C',
+    2.5: 'D+',
+    2.0: 'D',
+    1.0: 'F',
+  };
+
   final TextEditingController subjectController = TextEditingController();
   final TextEditingController hoursController = TextEditingController();
 
