@@ -1,49 +1,60 @@
-# 📘 GPA Calculator App
+# 📊 GPA Calculator App
 
-You will build a **GPA Calculator App** to help students calculate their academic performance based on course grades and credit hours. The app will allow users to input their courses, assign grades and hours, and compute the GPA dynamically.
+A simple academic GPA calculator built using **Flutter** and **BLoC** pattern.  
+This app allows students to manage their course grades and credit hours and calculates their GPA dynamically.
 
-> **Note:** 
-> - You are required to **design the UI layout by yourself** using appropriate Flutter widgets.  
-> - You must use **BLoC** for state management in this project.
+---
+
+## 🖼️ Screenshots
+
+<div align="center">
+  <img src="gpa_calculator/assets/screenshot/p1.png" width="250"/>
+  <img src="gpa_calculator/assets/screenshot/p2.png" width="250"/>
+  <img src="gpa_calculator/assets/screenshot/p3.png" width="250"/>
+  <img src="gpa_calculator/assets/screenshot/p4.png" width="250"/>
+</div>
 
 ---
 
 ## 🚀 App Features
 
-### A. 📄 Homepage :
+### 📄 Homepage
+- View all added courses with their grade and credit hours.
+- See real-time calculated GPA.
+- Tap a course to edit it.
+- Delete courses instantly.
+- Built with **BLoC** for robust state management.
 
-- Display a list of all added courses with their grades and credit hours.
-- Add a form to input course name, grade, and credit hours.
-- Use a dropdown or custom widget to select the grade from a list (e.g., A, B+, C...).
-- Display the calculated GPA at the top or bottom of the screen.
-- Use **BLoC** to manage state updates when courses are added or removed.
-
-### B. ➕ Add/Edit Course Screen:
-
-- Allow users to input:
-  - Course name  
-  - Grade  
-  - Credit hours  
-- Provide form validation (e.g., course name can't be empty, credit must be a number).
-- Support editing or deleting courses.
+### ➕ Add/Edit Course Screen
+- Enter course name.
+- Choose grade from dropdown (A+, A, B+, etc.).
+- Enter credit hours (validated as a number).
+- Supports form validation.
+- Allows editing and deleting courses.
 
 ---
 
-## 💻 GitHub Submission Guidelines:
+## 🛠️ Built With
 
-- Ensure your pull request includes a **well-structured README** file.
-- The README should include:
-  - A screenshot of your app.  
-  - Project description and instructions.
-
----
-
-## ⏰ Deadline
-
-Your project must be submitted by **May 22**, **AT 10:00 AM**.
+- **Flutter**
+- **Dart**
+- **flutter_bloc**
+- **Material Design**
 
 ---
 
-## 📝 Reminder
+## ▶️ Getting Started
 
-> Even the greatest apps started as a blank screen 🖥️🎉
+1. **Clone the repo:**
+   ```bash
+   git clone https://github.com/your-username/gpa_calculator.git
+   cd gpa_calculator
+Install dependencies:
+flutter pub get
+Run the app:
+flutter run
+
+ Author
+
+Created by manaalq
+GitHub: @manaalq
