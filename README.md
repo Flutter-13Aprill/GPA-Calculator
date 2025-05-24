@@ -19,7 +19,7 @@ A Flutter app that helps students calculate their academic GPA dynamically based
 ## 🖼️ Screenshots
 
 | Home | Add Course |
-|:--:|:--:|
+|------|------------|
 | ![](assets/screenshots/home.png) | ![](assets/screenshots/add_course.png) |
 
 ---
