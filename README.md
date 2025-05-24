@@ -2,13 +2,16 @@
 ### Tuwaiq Academy Flutter Bootcamp
 
 ### 💡 Project Idea
----
 
 A GPA calculator app that allows users to add, edit, and delete courses, built using the BLoC pattern in Flutter.
 
-
 ---
 ### 🔍 Project Preview
+
+
+
+
+https://github.com/user-attachments/assets/c2c307c5-48c8-4d3f-954d-972aaac19071
 
 ---
 ### 📦 Packages Used
