@@ -6,8 +6,14 @@
 
 ---
 
-###Output 📱
+### Output 📱
 
+<img src="https://github.com/user-attachments/assets/a522c24d-0d26-42a8-9fd8-7271cb86d7d3" alt="output" width="300" >
+<img src="https://github.com/user-attachments/assets/a3df6590-90d8-4919-8e1f-f41e7cdfa59e" alt="output" width="300" >
+<img src="https://github.com/user-attachments/assets/52de5faa-00e1-476e-8adb-b65c80370a35" alt="output" width="300" >
+<img src="https://github.com/user-attachments/assets/b783e2fd-669b-4ad1-b050-8a64c9c7501e" alt="output" width="300" >
+<img src="https://github.com/user-attachments/assets/8786ab21-93b9-4e74-920b-5dc225aafe95" alt="output" width="300" >
+<img src="https://github.com/user-attachments/assets/17c78b57-e137-47b8-b39f-b6335ede2d9e" alt="output" width="300" >
 
 ---
 
