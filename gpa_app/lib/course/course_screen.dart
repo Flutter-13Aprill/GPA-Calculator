@@ -11,6 +11,8 @@ class CourseScreen extends StatelessWidget {
   final hoursController = TextEditingController();
   @override
   Widget build(BuildContext context) {
+    // Provide the CourseBloc to manage course input and GPA logic
+
     return BlocProvider(
       create: (context) => CourseBloc(),
       child: Builder(
@@ -30,6 +32,7 @@ class CourseScreen extends StatelessWidget {
                   final gradeMap = bloc.gradeMap;
                   final selectedGrade =
                       (state is NameChangeState) ? state.grade : 'A';
+                  // Extract data from state if available
 
                   if (state is NameChangeState) {
                     name = state.name;
@@ -40,6 +43,7 @@ class CourseScreen extends StatelessWidget {
                   return Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
 
+                    // Input for course name
                     children: [
                       CustomTextField(
                         controller: nameController,
@@ -50,6 +54,8 @@ class CourseScreen extends StatelessWidget {
                                 ? null
                                 : 'Only letters allowed',
                       ),
+
+                      // Input for course hours
                       const SizedBox(height: 20),
                       CustomTextField(
                         controller: hoursController,
@@ -62,6 +68,7 @@ class CourseScreen extends StatelessWidget {
                       ),
                       const SizedBox(height: 20),
 
+                      // Dropdown to select grade
                       DropdownButtonFormField(
                         value: selectedGrade,
                         items:
@@ -83,6 +90,8 @@ class CourseScreen extends StatelessWidget {
                           border: OutlineInputBorder(),
                         ),
                       ),
+
+                      // Button to submit the course
                       ElevatedButton(
                         onPressed:
                             isValid
@@ -98,11 +107,14 @@ class CourseScreen extends StatelessWidget {
                                 : null,
                         child: Text('Sumbit'),
                       ),
+
+                      // Display saved courses
                       const SizedBox(height: 20),
                       Text(
                         'Saved Courses: ',
                         style: TextStyle(fontWeight: FontWeight.bold),
                       ),
+                      // List of added courses
                       Expanded(
                         child: ListView.builder(
                           itemCount: courses.length,

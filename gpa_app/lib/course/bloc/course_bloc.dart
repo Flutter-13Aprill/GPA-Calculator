@@ -9,7 +9,7 @@ part 'course_state.dart';
 class CourseBloc extends Bloc<CourseEvent, CourseState> {
   final List<CourseModel> courses = [];
   int? editingIndex;
-
+  // Grade to GPA value map
   final Map<String, double> gradeMap = {
     'A+': 4.0,
     'A': 4.0,
@@ -24,6 +24,8 @@ class CourseBloc extends Bloc<CourseEvent, CourseState> {
     'D': 1.0,
     'F': 0.0,
   };
+  // GPA calculation based on courses
+
   double calculateGpa(List<CourseModel> courses) {
     if (courses.isEmpty) return 0.0;
     double totalPoints = 0;
